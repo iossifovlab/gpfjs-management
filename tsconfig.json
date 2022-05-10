@@ -1,0 +1,28 @@
+{
+  "compileOnSave": false,
+  "angularCompilerOptions": {
+    "entryModule": "./app/app.module#AppModule",
+    "genDir": "./ngfactory",
+    "enableIvy": true,
+    "strictTemplates": true,
+    "strict": true
+  },
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "baseUrl": "src",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "target": "es2018",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "noImplicitThis": true,
+    "strictBindCallApply": true
+    }
+}
