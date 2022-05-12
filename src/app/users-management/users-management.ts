@@ -1,9 +1,9 @@
 export class UserRow {
-  // public static fromJsonArray(json): UserRow[] {
-  //   return json.map(user => UserRow.fromJson(user));
-  // }
+  public static fromJsonArray(json: any): UserRow[] {
+    return json.map((user: any) => UserRow.fromJson(user));
+  }
 
-  public static fromJson(json): UserRow {
+  public static fromJson(json: any): UserRow {
     return new UserRow(
       json['email'],
       json['groups'],
@@ -14,6 +14,6 @@ export class UserRow {
   public constructor(
     public email: string,
     public groups: Array<string>,
-    public allowedDatasets: Array<string>
+    public datasets: Array<string>
   ) {}
 }
