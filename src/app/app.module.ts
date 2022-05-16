@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { GroupsManagementComponent } from './groups-management/groups-management.component';
 import { UsersManagementComponent } from './users-management/users-management.component';
 import { DatasetsManagementComponent } from './datasets-management/datasets-management.component';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,8 +18,11 @@ import { DatasetsManagementComponent } from './datasets-management/datasets-mana
     DatasetsManagementComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
-    NgbModule
+    NgbModule,
+    NgMultiSelectDropDownModule.forRoot(),
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

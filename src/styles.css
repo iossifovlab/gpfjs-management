@@ -1,1 +1,135 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body,
+material-app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  overflow-y: scroll;
+}
+
+a {
+  color: #2a6395;
+}
+
+input,
+button {
+  font-family: Roboto, sans-serif;
+}
+
+label {
+  margin-bottom: 0;
+  user-select: none;
+}
+
+.card {
+  height: 100%;
+}
+
+.card-row {
+  margin-left: -15px;
+}
+
+.form-block {
+  margin-top: 20px;
+  border-radius: 3px;
+}
+
+.form-block-title {
+  font-weight: 500;
+  width: 120px;
+}
+
+.form-block .nav-item {
+  font-size: 0.9em;
+}
+
+.form-block .navbar {
+  padding: 10px 20px;
+}
+
+.form-block .tab-content {
+  font-size: 0.9em;
+}
+
+.panel {
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 12.5%);
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #2a6395;
+}
+
+.btn-group {
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-outline-primary {
+  border-color: #2a6395;
+}
+
+.btn-primary:hover {
+  background-color: #173f62;
+}
+
+.btn-right {
+  float: right;
+}
+
+.btn:disabled,
+.btn-primary:disabled {
+  cursor: not-allowed;
+}
+
+.btn-primary:disabled {
+  background-color: #3e5d7e;
+  border-color: #3e5d7e;
+}
+
+.btn-primary:disabled:hover {
+  background-color: #3e5d7e;
+}
+
+.form-block .alert {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.form-block .alert ul {
+  margin: 0;
+  padding-left: 1em;
+}
+
+.btn-default {
+  background-color: #eee;
+  border: 1px solid #ddd;
+}
+
+#search-box {
+  border: 1px solid #ccc;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 10px;
+  line-height: 34px;
+}
+
+.nav-link {
+  margin-right: 8px;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #2a6395;
+}
+
+ngb-modal-window {
+  z-index: 1000;
+}
