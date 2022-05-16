@@ -1,4 +1,4 @@
-<div class="grid-container">
+<div class="grid-container" *ngIf="userRows && allGroups">
   <div class="grid-item">Users</div>
   <div class="grid-item">Groups</div>
   <div class="grid-item">Datasets</div>
@@ -6,6 +6,7 @@
     <div class="grid-item">{{userRow.email}}</div>
     <div class="grid-item">
       <div style="display: block;" *ngFor="let group of userRow.groups">{{group}}</div>
+
     </div>
     <div class="grid-item">
       <div style="display: block;" *ngFor="let dataset of userRow.datasets">{{dataset}}</div>
