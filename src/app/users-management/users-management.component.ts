@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemAddEvent } from 'app/item-add-menu/item-add-menu';
 import { ManagementService } from 'app/management.service';
 import { UserRow } from './users-management';
 
@@ -22,5 +23,9 @@ export class UsersManagementComponent implements OnInit {
     this.managementService.getAllGroups().subscribe(groups => {
       this.allGroups = groups;
     });
+  }
+
+  addGroup($event: ItemAddEvent) {
+    this.userRows[this.userRows.findIndex(user => user.email === $event.id)].groups.push($event.item);
   }
 }

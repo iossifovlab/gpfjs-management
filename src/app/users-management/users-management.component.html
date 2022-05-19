@@ -6,7 +6,7 @@
     <div class="grid-item">{{userRow.email}}</div>
     <div class="grid-item">
       <div style="display: block;" *ngFor="let group of userRow.groups">{{group}}</div>
-
+      <gpf-item-add-menu [id]="userRow.email" [items]="userRow.groups | arrayDifference:allGroups" (addItemEvent)="addGroup($event)"></gpf-item-add-menu>
     </div>
     <div class="grid-item">
       <div style="display: block;" *ngFor="let dataset of userRow.datasets">{{dataset}}</div>

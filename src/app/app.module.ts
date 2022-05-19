@@ -9,13 +9,17 @@ import { DatasetsManagementComponent } from './datasets-management/datasets-mana
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ItemAddMenuComponent } from './item-add-menu/item-add-menu.component';
+import { ArrayDifferencePipe } from './array-difference.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     GroupsManagementComponent,
     UsersManagementComponent,
-    DatasetsManagementComponent
+    DatasetsManagementComponent,
+    ItemAddMenuComponent,
+    ArrayDifferencePipe
   ],
   imports: [
     FormsModule,
