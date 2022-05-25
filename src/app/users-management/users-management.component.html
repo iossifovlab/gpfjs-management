@@ -1,15 +1,22 @@
 <div class="grid-container" *ngIf="userRows && allGroups">
-  <div class="grid-item">Users</div>
-  <div class="grid-item">Groups</div>
-  <div class="grid-item">Datasets</div>
+  <div class="grid-header">Users</div>
+  <div class="grid-header">Groups</div>
+  <div class="grid-header">Datasets</div>
+  <div class="grid-header">Actions</div>
   <ng-container *ngFor="let userRow of userRows">
-    <div class="grid-item">{{userRow.email}}</div>
-    <div class="grid-item">
-      <div style="display: block;" *ngFor="let group of userRow.groups">{{group}}</div>
-      <gpf-item-add-menu [id]="userRow.email" [items]="userRow.groups | arrayDifference:allGroups" (addItemEvent)="addGroup($event)"></gpf-item-add-menu>
+    <div class="grid-cell">{{userRow.email}}</div>
+    <div class="grid-cell">
+      <div *ngFor="let group of userRow.groups">
+        <span>{{group}}</span>
+        <button style="border: none; background: none;" (click)="removeGroup(userRow, group)">x</button>
+      </div>
+      <gpf-item-add-menu [id]="userRow.email" [items]="userRow.groups | arrayDifference: allGroups:manualPipeTrigger" (addItemEvent)="addGroup($event)"></gpf-item-add-menu>
     </div>
-    <div class="grid-item">
-      <div style="display: block;" *ngFor="let dataset of userRow.datasets">{{dataset}}</div>
+    <div class="grid-cell">
+      <div *ngFor="let dataset of userRow.datasets">{{dataset}}</div>
+    </div>
+    <div class="grid-cell">
+      <button class="delete-button" (click)="deleteUser(userRow)">Delete user</button>
     </div>
   </ng-container>
 </div>
