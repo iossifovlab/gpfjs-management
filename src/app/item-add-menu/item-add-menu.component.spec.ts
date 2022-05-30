@@ -28,4 +28,20 @@ describe('ItemAddMenuComponent', () => {
     expect(component.items).toEqual(['item3']);
     expect(emitSpy).toHaveBeenLastCalledWith(new ItemAddEvent('id4', 'item1'))
   });
+
+  it('should close menu when clicking outside', () => {
+    // Simulate opening the menu
+    component.showMenu = true;
+
+    // Simulate click inside the menu
+    component.clickInside();
+    component.allClicks();
+  
+    expect(component.showMenu).toBe(true);
+
+    // Simulate click outside the menu
+    component.allClicks();
+  
+    expect(component.showMenu).toBe(false);
+  });
 });
