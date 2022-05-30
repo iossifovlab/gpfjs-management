@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { GroupsManagementComponent } from './groups-management/groups-management.component';
@@ -26,7 +26,8 @@ import { ArrayDifferencePipe } from './array-difference.pipe';
     BrowserModule,
     NgbModule,
     NgMultiSelectDropDownModule.forRoot(),
-    CommonModule
+    CommonModule,
+    NgbNavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
