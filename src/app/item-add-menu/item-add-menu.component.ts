@@ -43,7 +43,7 @@ export class ItemAddMenuComponent implements OnChanges {
   }
   
   @HostListener('document:click')
-  public clickout() {
+  public allClicks() {
     if (!this.isInside) {
       this.showMenu = false;
     }
